@@ -1,0 +1,295 @@
+/* Custom Styles for Adopet Web Application */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+}
+
+/* Navbar Styles */
+nav {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.brand-logo {
+    font-weight: 500;
+}
+
+/* Card Styles */
+.card {
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+
+.card-title {
+    margin-bottom: 30px !important;
+}
+
+.card-title h4 {
+    margin: 10px 0;
+    color: #1976d2;
+}
+
+.card-title .flow-text {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+/* Form Styles */
+.input-field {
+    margin-bottom: 20px;
+}
+
+.input-field input:focus + label {
+    color: #1976d2 !important;
+}
+
+.input-field input:focus {
+    border-bottom: 1px solid #1976d2 !important;
+    box-shadow: 0 1px 0 0 #1976d2 !important;
+}
+
+.input-field .prefix.active {
+    color: #1976d2 !important;
+}
+
+/* Button Styles */
+.btn, .btn-large {
+    border-radius: 25px;
+    text-transform: none;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.btn:hover, .btn-large:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transform: translateY(-2px);
+}
+
+.btn:disabled, .btn-large:disabled {
+    background-color: #ccc !important;
+    color: #666 !important;
+    box-shadow: none;
+    transform: none;
+}
+
+/* Pet Grid Styles */
+.pet-card {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.pet-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.pet-card.selected {
+    border: 3px solid #4caf50;
+    box-shadow: 0 0 20px rgba(76, 175, 80, 0.3);
+}
+
+.pet-card .card-image {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.pet-card .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.pet-card:hover .card-image img {
+    transform: scale(1.1);
+}
+
+.pet-card .card-content {
+    padding: 15px;
+}
+
+.pet-card .card-title {
+    font-size: 1.2rem !important;
+    margin-bottom: 10px !important;
+    color: #1976d2;
+}
+
+.pet-card .pet-info {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.pet-card .pet-description {
+    color: #888;
+    font-size: 0.85rem;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+/* Selection Indicator */
+.pet-card.selected::before {
+    content: '✓';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #4caf50;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    z-index: 10;
+}
+
+/* Home Section Styles */
+#home-section .card-panel {
+    border-radius: 12px;
+    border-left: 4px solid #1976d2;
+}
+
+#user-info {
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Toast Styles */
+.toast {
+    border-radius: 8px;
+    font-weight: 500;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.toast.error {
+    background-color: #f44336;
+    color: white;
+}
+
+.toast.success {
+    background-color: #4caf50;
+    color: white;
+}
+
+.toast.info {
+    background-color: #2196f3;
+    color: white;
+}
+
+.toast.warning {
+    background-color: #ff9800;
+    color: white;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 95%;
+    }
+    
+    .card-title h4 {
+        font-size: 1.5rem;
+    }
+    
+    .flow-text {
+        font-size: 1rem !important;
+    }
+    
+    .btn-large {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .sidenav {
+        background-color: #1976d2;
+    }
+    
+    .sidenav li a {
+        color: white;
+    }
+    
+    .sidenav li a:hover {
+        background-color: rgba(255,255,255,0.1);
+    }
+}
+
+/* Loading Animation */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255,255,255,.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Fade In Animation */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Success Message Styles */
+.success-message {
+    background: linear-gradient(135deg, #4caf50, #45a049);
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.success-message h5 {
+    margin: 0 0 10px 0;
+    font-size: 1.3rem;
+}
+
+.success-message p {
+    margin: 0;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Error Message Styles */
+.error-message {
+    background: linear-gradient(135deg, #f44336, #d32f2f);
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.error-message h5 {
+    margin: 0 0 10px 0;
+    font-size: 1.3rem;
+}
+
+.error-message p {
+    margin: 0;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
