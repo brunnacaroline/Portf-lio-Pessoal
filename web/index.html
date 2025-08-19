@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopet - Sistema de Adoção de Pets</title>
+    
+    <!-- MaterializeCSS CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="nav-extended blue darken-3">
+        <div class="nav-wrapper container">
+            <a href="#" class="brand-logo">
+                <i class="material-icons left">pets</i>
+                Adopet
+            </a>
+            <a href="#" data-target="mobile-nav" class="sidenav-trigger">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li id="nav-home" style="display: none;">
+                    <a href="#" onclick="showHome()">
+                        <i class="material-icons left">home</i>Home
+                    </a>
+                </li>
+                <li id="nav-pets" style="display: none;">
+                    <a href="#" onclick="showPets()">
+                        <i class="material-icons left">pets</i>Pets
+                    </a>
+                </li>
+                <li id="nav-logout" style="display: none;">
+                    <a href="#" onclick="logout()">
+                        <i class="material-icons left">exit_to_app</i>Sair
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <ul class="sidenav" id="mobile-nav">
+        <li id="mobile-nav-home" style="display: none;">
+            <a href="#" onclick="showHome()">
+                <i class="material-icons left">home</i>Home
+            </a>
+        </li>
+        <li id="mobile-nav-pets" style="display: none;">
+            <a href="#" onclick="showPets()">
+                <i class="material-icons left">pets</i>Pets
+            </a>
+        </li>
+        <li id="mobile-nav-logout" style="display: none;">
+            <a href="#" onclick="logout()">
+                <i class="material-icons left">exit_to_app</i>Sair
+            </a>
+        </li>
+    </ul>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Login Section -->
+        <div id="login-section" class="container">
+            <div class="row">
+                <div class="col s12 m8 l6 offset-m2 offset-l3">
+                    <div class="card">
+                        <div class="card-content">
+                            <span class="card-title center-align">
+                                <i class="material-icons large blue-text">pets</i>
+                                <h4>Adopet</h4>
+                                <p class="flow-text">Faça login para continuar</p>
+                            </span>
+                            
+                            <form id="login-form">
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <i class="material-icons prefix">email</i>
+                                        <input id="email" type="email" class="validate" required>
+                                        <label for="email">Email</label>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <i class="material-icons prefix">lock</i>
+                                        <input id="password" type="password" class="validate" required>
+                                        <label for="password">Senha</label>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col s12 center-align">
+                                        <button class="btn waves-effect waves-light blue darken-3" type="submit">
+                                            <i class="material-icons left">login</i>
+                                            Entrar
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                            
+                            <div class="row">
+                                <div class="col s12 center-align">
+                                    <a href="#" onclick="showForgotPassword()" class="blue-text">
+                                        <i class="material-icons left">help</i>
+                                        Esqueci minha senha
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Forgot Password Section -->
+        <div id="forgot-password-section" class="container" style="display: none;">
+            <div class="row">
+                <div class="col s12 m8 l6 offset-m2 offset-l3">
+                    <div class="card">
+                        <div class="card-content">
+                            <span class="card-title center-align">
+                                <i class="material-icons large blue-text">lock_reset</i>
+                                <h4>Trocar Senha</h4>
+                                <p class="flow-text">Digite seu email para trocar a senha</p>
+                            </span>
+                            
+                            <form id="forgot-password-form">
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <i class="material-icons prefix">email</i>
+                                        <input id="reset-email" type="email" class="validate" required>
+                                        <label for="reset-email">Email</label>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <i class="material-icons prefix">lock</i>
+                                        <input id="new-password" type="password" class="validate" required>
+                                        <label for="new-password">Nova Senha</label>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col s12 center-align">
+                                        <button class="btn waves-effect waves-light blue darken-3" type="submit">
+                                            <i class="material-icons left">save</i>
+                                            Trocar Senha
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                            
+                            <div class="row">
+                                <div class="col s12 center-align">
+                                    <a href="#" onclick="showLogin()" class="blue-text">
+                                        <i class="material-icons left">arrow_back</i>
+                                        Voltar ao Login
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Home Section -->
+        <div id="home-section" class="container" style="display: none;">
+            <div class="row">
+                <div class="col s12">
+                    <div class="card">
+                        <div class="card-content center-align">
+                            <span class="card-title">
+                                <i class="material-icons large blue-text">home</i>
+                                <h3>Bem-vindo à Adopet!</h3>
+                            </span>
+                            <p class="flow-text">
+                                A Adopet Brunna fica feliz em telo junto nessa jornada.<br>
+                                <strong>Não compre, Adote!</strong>
+                            </p>
+                            
+                            <div class="row">
+                                <div class="col s12 m6 offset-m3">
+                                    <div class="card-panel blue lighten-5">
+                                        <h5>Usuário Logado</h5>
+                                        <p id="user-info">Carregando...</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col s12 center-align">
+                                    <button class="btn-large waves-effect waves-light blue darken-3" onclick="showPets()">
+                                        <i class="material-icons left">pets</i>
+                                        Ver Pets Disponíveis
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pets Section -->
+        <div id="pets-section" class="container" style="display: none;">
+            <div class="row">
+                <div class="col s12">
+                    <div class="card">
+                        <div class="card-content">
+                            <span class="card-title center-align">
+                                <i class="material-icons large blue-text">pets</i>
+                                <h3>Pets Disponíveis para Adoção</h3>
+                                <p class="flow-text">Clique na foto do pet que deseja adotar</p>
+                            </span>
+                            
+                            <div id="pets-grid" class="row">
+                                <!-- Pets serão carregados aqui dinamicamente -->
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col s12 center-align">
+                                    <button id="adopt-btn" class="btn-large waves-effect waves-light green darken-2" onclick="adoptPet()" disabled>
+                                        <i class="material-icons left">favorite</i>
+                                        Adotar Pet Selecionado
+                                    </button>
+                                    
+                                    <button class="btn-large waves-effect waves-light red darken-2" onclick="cancelAdoption()">
+                                        <i class="material-icons left">cancel</i>
+                                        Cancelar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Toast Container -->
+    <div id="toast-container"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
