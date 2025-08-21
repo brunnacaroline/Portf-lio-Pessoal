@@ -3,7 +3,7 @@ const path = require('path');
 const cors = require('cors');
 
 const app = express();
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3001;
 
 // Middleware
 app.use(cors());
@@ -26,7 +26,7 @@ app.get('/health', (req, res) => {
 
 // Start server
 app.listen(PORT, () => {
-    console.log(`🌐 Aplicação Web rodando na porta ${PORT}`);
+    console.log(`🌐 Frontend rodando na porta ${PORT}`);
     console.log(`📱 Acesse: http://localhost:${PORT}`);
     console.log(`🔗 API Backend: http://localhost:3000`);
     console.log(`📚 Documentação API: http://localhost:3000/api-docs`);

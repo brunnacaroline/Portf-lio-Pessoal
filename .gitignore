@@ -1,12 +1,14 @@
-# Dependências
+# Dependencies
 node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+*/node_modules/
 
 # Logs
 logs
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
 
 # Runtime data
 pids
@@ -16,28 +18,33 @@ pids
 
 # Coverage directory used by tools like istanbul
 coverage/
+*/coverage/
 *.lcov
 
 # nyc test coverage
 .nyc_output
 
-# Grunt intermediate storage
+# Grunt intermediate storage (https://gruntjs.com/creating-plugins#storing-task-files)
 .grunt
 
-# Bower dependency directory
+# Bower dependency directory (https://bower.io/)
 bower_components
 
 # node-waf configuration
 .lock-wscript
 
-# Compiled binary addons
+# Compiled binary addons (https://nodejs.org/api/addons.html)
 build/Release
 
 # Dependency directories
+node_modules/
 jspm_packages/
 
 # TypeScript v1 declaration files
 typings/
+
+# TypeScript cache
+*.tsbuildinfo
 
 # Optional npm cache directory
 .npm
@@ -64,8 +71,9 @@ typings/
 .env
 .env.test
 .env.production
+.env.local
 
-# parcel-bundler cache
+# parcel-bundler cache (https://parceljs.org/)
 .cache
 .parcel-cache
 
@@ -88,14 +96,19 @@ public
 tmp/
 temp/
 
-# Editor directories and files
+# Cypress
+cypress/videos/
+cypress/screenshots/
+cypress/downloads/
+
+# IDE
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
 
-# OS generated files
+# OS
 .DS_Store
 .DS_Store?
 ._*
@@ -103,3 +116,7 @@ temp/
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Project specific
+config.env
+*.env

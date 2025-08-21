@@ -1,0 +1,27 @@
+{
+  "name": "portfolio-pessoal-frontend",
+  "version": "1.0.0",
+  "description": "Frontend para o sistema Portfolio Pessoal - Adoção de Pets",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "cypress:run:lembrarSenha": "cypress run --spec 'cypress/e2e/lembrarSenha.cy.js'",
+    "cypress:run:login": "cypress run --spec 'cypress/e2e/login.cy.js'",
+    "cypress:run:loginBloqueado": "cypress run --spec 'cypress/e2e/loginBloqueado.cy.js'",
+    "cypress:run:loginInvalido": "cypress run --spec 'cypress/e2e/loginInvalido.cy.js'"
+  },
+  "keywords": ["portfolio", "frontend", "pets", "adoção", "cypress"],
+  "author": "Brunna",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2",
+    "cypress": "^14.5.4"
+  }
+}
