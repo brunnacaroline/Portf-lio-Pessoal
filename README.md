@@ -155,6 +155,7 @@ npm run frontend:cypress:run:loginInvalido
 
 # Comando direto
 npx cypress run --spec "cypress/e2e/lembrarSenha.cy.js"
+
 ```
 
 ### **Jest - Testes de API:**
@@ -169,6 +170,15 @@ npm run backend:test:watch
 npm run backend:test:coverage
 ```
 
+### **K6 - Testes de Performance:**
+```bash
+# Executar um teste
+k6 run testperformance/scripts/api-test.js
+
+
+# Gerar os resultados em JSON:
+k6 run testperformance/scripts/api-test.js --out json=testperformance/results/summary.json
+```
 
 
 ## 🔧 Desenvolvimento
