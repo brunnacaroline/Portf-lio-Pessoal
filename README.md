@@ -6,7 +6,7 @@ Sistema completo de adoção de pets com frontend e backend separados em duas pa
 
 ```
 Portfolio-Pessoal/
-├── backend/                 # API Backend (Node.js + Express)
+├── backend/                # API Backend (Node.js + Express)
 │   ├── server.js           # Servidor principal
 │   ├── routes/             # Rotas da API
 │   ├── middleware/         # Middlewares de autenticação
