@@ -26,9 +26,9 @@ Portfolio-Pessoal/
 └── README.md               # Este arquivo
 ├──testperformance/
 |   ├── scripts/
-│     └── api-test.js         # Script principal de teste
-|     ├── results/
-│     └── summary.json        # Relatório de execução
+│     └── api-test.js       # Script principal de teste
+|   ├── results/
+│     └── summary.json      # Relatório de execução
 
 ```
 
