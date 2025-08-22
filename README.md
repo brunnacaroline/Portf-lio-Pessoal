@@ -24,6 +24,12 @@ Portfolio-Pessoal/
 │   └── package.json        # Dependências do frontend
 ├── package.json            # Workspace principal
 └── README.md               # Este arquivo
+├──testperformance/
+|   ├── scripts/
+│     └── api-test.js         # Script principal de teste
+|     ├── results/
+│     └── summary.json        # Relatório de execução
+
 ```
 
 ## 🚀 Como Executar
@@ -77,6 +83,11 @@ npm run frontend:cypress:open    # Interface gráfica
 npm run frontend:cypress:run     # Modo headless
 ```
 
+#### **Não Funcional (K6):**
+```bash
+k6 run testperformance/scripts/api-test.js # Opcional) Salve os resultados em JSON:
+k6 run testperformance/scripts/api-test.js --out json=testperformance/results/summary.json # Modo headless
+```
 #### **Todos os Testes:**
 ```bash
 npm test
@@ -118,6 +129,7 @@ npm test
 - ✅ Gerenciamento de pets
 - ✅ Testes E2E com Cypress
 
+
 ## 🔐 Credenciais de Teste
 
 ```
@@ -156,6 +168,8 @@ npm run backend:test:watch
 # Com cobertura
 npm run backend:test:coverage
 ```
+
+
 
 ## 🔧 Desenvolvimento
 
