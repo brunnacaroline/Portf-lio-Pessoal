@@ -178,7 +178,15 @@ k6 run testperformance/scripts/api-test.js
 
 # Gerar os resultados em JSON:
 k6 run testperformance/scripts/api-test.js --out json=testperformance/results/summary.json
+
+
 ```
+
+### **KDocumentação do projeto:**
+```bash
+# https://github.com/brunnacaroline/Portfolio-Pessoal/wiki
+```
+
 
 
 ## 🔧 Desenvolvimento
