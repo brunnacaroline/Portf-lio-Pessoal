@@ -142,7 +142,7 @@ Senha: 123456
 - **Backend:** `cypress/README.md`
 - **Frontend:** `frontend/README.md`
 - **API:** `http://localhost:3000/api-docs`
-- **[Acesse a documentação de requisitos e casos de testes projeto:]**(https://github.com/brunnacaroline/Portfolio-Pessoal/wiki)
+- **Requisitos e casos de testes projeto:**(https://github.com/brunnacaroline/Portfolio-Pessoal/wiki)
 
 ## 🧪 Executando Testes Específicos
 
