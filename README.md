@@ -142,6 +142,7 @@ Senha: 123456
 - **Backend:** `cypress/README.md`
 - **Frontend:** `frontend/README.md`
 - **API:** `http://localhost:3000/api-docs`
+- **[Acesse a documentação de requisitos e casos de testes projeto:]**(https://github.com/brunnacaroline/Portfolio-Pessoal/wiki)
 
 ## 🧪 Executando Testes Específicos
 
@@ -181,12 +182,6 @@ k6 run testperformance/scripts/api-test.js --out json=testperformance/results/su
 
 
 ```
-
-### **Documentação do projeto:**
-[Acesse a documentação projeto](https://github.com/brunnacaroline/Portfolio-Pessoal/wiki)
-
-
-
 
 ## 🔧 Desenvolvimento
 
