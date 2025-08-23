@@ -182,9 +182,9 @@ k6 run testperformance/scripts/api-test.js --out json=testperformance/results/su
 
 ```
 
-### **KDocumentação do projeto:**
+### **Documentação do projeto:**
 ```bash
-# https://github.com/brunnacaroline/Portfolio-Pessoal/wiki
+# <https://github.com/brunnacaroline/Portfolio-Pessoal/wiki>
 ```
 
 
